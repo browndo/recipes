@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Brown's Recipes</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <!--<link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">-->
+  <link rel="stylesheet" href="app.css">
+  <!--<script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>-->
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+</head>
+<body>
+
+  <!--Previous navigation menu-->
+  <!--<ul class="menu">
+    <li><a href="#!/login">Login</a></li>
+    <li><a href="#!/recipes">Recipes</a></li>
+  </ul>-->
+
+<!--Nav bar and header-->
+  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+  <!--<a class="navbar-brand" href="#">Navbar</a>-->
+  <a class="navbar-brand" href="#"><img src="../images/Penguins.jpg" height="30" alt="Logo"></a>
+  <ul class="nav navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="#!/login">Home <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#!/recipes">Recipes</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#!/about">About</a>
+    </li>
+  </ul>
+  <form class="form-inline pull-xs-right" ng-controller="recipeCtrl" ng-show="location.path() === '/recipes'">
+    <input class="form-control" type="text" placeholder="Search">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+  </form>
+   <!--<div class="form-inline pull-xs-right">v<span app-version></span></div>-->
+</nav>
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <div ng-view></div>
+
+  <!--<div>Angular seed app: v<span app-version></span></div>-->
+
+  <!--uses .footer in local app.css for info not from bootstrap 4-->
+  <div class="footer">
+        <div class="panel-footer text-center">
+            <p class="tcenter"><small>Dibangunkan oleh <a href="http://facebook.com/handyplast" target="_blank">Zulhilmi Zainudin</a> // Teh tarik ditaja oleh <a href="http://www.binablogdotcomsendiri.com/blog/?utm_source=social-signal-checker&utm_medium=social-signal-checker-tool&utm_campaign=social-signal-checker" target="_blank">Bina Blog Dot Com Sendiri</a> &#128522;</small></p>
+        </div>
+    </div>
+
+    <div class="form-inline pull-xs-right">v<span app-version></span></div>
+
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="app.js"></script>
+  <script src="login/login.js"></script>
+  <script src="recipes/recipes.js"></script>
+  <script src="about/about.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+  <!-- jQuery first, then Tether, then Bootstrap JS. -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+
+</body>
+</html>
